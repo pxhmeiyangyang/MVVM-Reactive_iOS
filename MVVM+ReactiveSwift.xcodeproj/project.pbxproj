@@ -10,9 +10,8 @@
 		18B0CD4441B00A57A1CCDB27 /* Pods_MVVM_ReactiveSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4836F4E719E5DA4053A9FC /* Pods_MVVM_ReactiveSwiftUITests.framework */; };
 		601BF23B0A943C03E70BE583 /* Pods_MVVM_ReactiveSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0A43BE75AA2BF8206A2004 /* Pods_MVVM_ReactiveSwiftTests.framework */; };
 		B3FDF57FD46A5344CC1AB318 /* Pods_MVVM_ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C9B624DDB74D412076990C /* Pods_MVVM_ReactiveSwift.framework */; };
+		F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DAC221AABDA00020B40 /* EmailVC.swift */; };
 		F1B289E32216AD82009EA3F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B289E22216AD82009EA3F9 /* AppDelegate.swift */; };
-		F1B289E52216AD82009EA3F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B289E42216AD82009EA3F9 /* ViewController.swift */; };
-		F1B289E82216AD82009EA3F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B289E62216AD82009EA3F9 /* Main.storyboard */; };
 		F1B289EA2216AD83009EA3F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B289E92216AD83009EA3F9 /* Assets.xcassets */; };
 		F1B289ED2216AD83009EA3F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B289EB2216AD83009EA3F9 /* LaunchScreen.storyboard */; };
 		F1B289F82216AD83009EA3F9 /* MVVM_ReactiveSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B289F72216AD83009EA3F9 /* MVVM_ReactiveSwiftTests.swift */; };
@@ -46,10 +45,9 @@
 		9B4836F4E719E5DA4053A9FC /* Pods_MVVM_ReactiveSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_ReactiveSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD747EA95D7955CB65F5969C /* Pods-MVVM+ReactiveSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwift/Pods-MVVM+ReactiveSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E431C71D9C83C331E26DC66D /* Pods-MVVM+ReactiveSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwift/Pods-MVVM+ReactiveSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		F1716DAC221AABDA00020B40 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		F1B289DF2216AD82009EA3F9 /* MVVM+ReactiveSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM+ReactiveSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B289E22216AD82009EA3F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1B289E42216AD82009EA3F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F1B289E72216AD82009EA3F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1B289E92216AD83009EA3F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1B289EC2216AD83009EA3F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1B289EE2216AD83009EA3F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,8 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F1B289E22216AD82009EA3F9 /* AppDelegate.swift */,
-				F1B289E42216AD82009EA3F9 /* ViewController.swift */,
-				F1B289E62216AD82009EA3F9 /* Main.storyboard */,
+				F1716DAC221AABDA00020B40 /* EmailVC.swift */,
 				F1B289E92216AD83009EA3F9 /* Assets.xcassets */,
 				F1B289EB2216AD83009EA3F9 /* LaunchScreen.storyboard */,
 				F1B289EE2216AD83009EA3F9 /* Info.plist */,
@@ -283,7 +280,6 @@
 			files = (
 				F1B289ED2216AD83009EA3F9 /* LaunchScreen.storyboard in Resources */,
 				F1B289EA2216AD83009EA3F9 /* Assets.xcassets in Resources */,
-				F1B289E82216AD82009EA3F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1B289E52216AD82009EA3F9 /* ViewController.swift in Sources */,
+				F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */,
 				F1B28A162216C714009EA3F9 /* OCDefine.m in Sources */,
 				F1B289E32216AD82009EA3F9 /* AppDelegate.swift in Sources */,
 			);
@@ -429,14 +425,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F1B289E62216AD82009EA3F9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F1B289E72216AD82009EA3F9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F1B289EB2216AD83009EA3F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
