@@ -18,12 +18,21 @@ class EmailVC: UIViewController {
     private let termsSwitch = UISwitch()
     private let reasonLabel = UILabel()
     private let submitButton = UIButton()
+    private let userService = UserService()
+    private var viewModel : ViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialData()
         initialSubviews()
+        bindModels()
+        consoleMessages()
     }
     
+    /// 初始化所有数据
+    private func initialData(){
+        viewModel = ViewModel.init(userService: userService)
+    }
     
     /// 初始化所有的子view
     private func initialSubviews(){
@@ -73,4 +82,42 @@ class EmailVC: UIViewController {
         }
     }
     
+    /// 绑定模型
+    private func bindModels(){
+        //initialize the interractive controls
+        emailField.text = viewModel.email.value
+        emailConfirmationField.text = viewModel.emailConfirmation.value
+        termsSwitch.isOn = false
+        //setup bindings with the interactive controls
+        viewModel.email <~ emailField.reactive
+            .continuousTextValues.skipNil()
+        viewModel.emailConfirmation <~ emailConfirmationField.reactive.continuousTextValues.skipNil()
+        viewModel.termsAccepted <~ termsSwitch.reactive.isOnValues
+        // Setup bindings with the invalidation reason label.
+        reasonLabel.reactive.text <~ viewModel.reasons
+        //setup the Action binding with the submit button
+        submitButton.reactive.pressed = CocoaAction(viewModel.submit)
+    }
+    
+    /// userService messages
+    private func consoleMessages(){
+        
+        userService.requestSignal.observeValues {
+            print("UserService.requestSignal: Username `\($0)`.")
+        }
+        
+        
+        viewModel.submit.completed.observeValues {
+            print("ViewModel.submit: execution producer has completed.")
+        }
+        
+        viewModel.email.result.signal.observeValues {
+            print("ViewModel.email: Validation result - \($0 != nil ? "\($0!)" : "No validation has ever been performed.")")
+        }
+        
+        viewModel.emailConfirmation.result.signal.observeValues {
+            print("ViewModel.emailConfirmation: Validation result - \($0 != nil ? "\($0!)" : "No validation has ever been performed.")")
+        }
+        
+    }
 }
