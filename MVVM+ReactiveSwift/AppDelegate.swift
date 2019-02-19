@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
-        window?.rootViewController = EmailVC()
+        window?.rootViewController = MainTabBarVC.sharedInstance
         window?.makeKeyAndVisible()
         return true
     }

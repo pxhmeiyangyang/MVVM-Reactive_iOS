@@ -20,6 +20,8 @@
 		F1B28A032216AD83009EA3F9 /* MVVM_ReactiveSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B28A022216AD83009EA3F9 /* MVVM_ReactiveSwiftUITests.swift */; };
 		F1B28A162216C714009EA3F9 /* OCDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B28A152216C714009EA3F9 /* OCDefine.m */; };
 		F1F999B1221B9EEC005A52F6 /* StdlibExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */; };
+		F1F999B5221BA6CC005A52F6 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F999B4221BA6CC005A52F6 /* MainTabBarVC.swift */; };
+		F1F999B7221BA928005A52F6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F999B6221BA928005A52F6 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		F1B28A142216C714009EA3F9 /* OCDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCDefine.h; sourceTree = "<group>"; };
 		F1B28A152216C714009EA3F9 /* OCDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDefine.m; sourceTree = "<group>"; };
 		F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StdlibExtensions.swift; sourceTree = "<group>"; };
+		F1F999B4221BA6CC005A52F6 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
+		F1F999B6221BA928005A52F6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F3EB9CEA7AE746EADA2669B2 /* Pods-MVVM+ReactiveSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwiftTests/Pods-MVVM+ReactiveSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +160,8 @@
 				F1B28A142216C714009EA3F9 /* OCDefine.h */,
 				F1B28A152216C714009EA3F9 /* OCDefine.m */,
 				F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */,
+				F1F999B4221BA6CC005A52F6 /* MainTabBarVC.swift */,
+				F1F999B6221BA928005A52F6 /* LoginVC.swift */,
 			);
 			path = "MVVM+ReactiveSwift";
 			sourceTree = "<group>";
@@ -398,8 +404,10 @@
 			files = (
 				F1716DB5221AB04E00020B40 /* ViewModel.swift in Sources */,
 				F1F999B1221B9EEC005A52F6 /* StdlibExtensions.swift in Sources */,
+				F1F999B7221BA928005A52F6 /* LoginVC.swift in Sources */,
 				F1716DB3221AB03000020B40 /* UserService.swift in Sources */,
 				F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */,
+				F1F999B5221BA6CC005A52F6 /* MainTabBarVC.swift in Sources */,
 				F1B28A162216C714009EA3F9 /* OCDefine.m in Sources */,
 				F1B289E32216AD82009EA3F9 /* AppDelegate.swift in Sources */,
 			);

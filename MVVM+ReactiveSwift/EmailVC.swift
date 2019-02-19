@@ -23,6 +23,7 @@ class EmailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "邮箱校验"
         initialData()
         initialSubviews()
         bindModels()
