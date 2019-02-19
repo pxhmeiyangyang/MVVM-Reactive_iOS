@@ -19,6 +19,7 @@
 		F1B289F82216AD83009EA3F9 /* MVVM_ReactiveSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B289F72216AD83009EA3F9 /* MVVM_ReactiveSwiftTests.swift */; };
 		F1B28A032216AD83009EA3F9 /* MVVM_ReactiveSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B28A022216AD83009EA3F9 /* MVVM_ReactiveSwiftUITests.swift */; };
 		F1B28A162216C714009EA3F9 /* OCDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B28A152216C714009EA3F9 /* OCDefine.m */; };
+		F1F999B1221B9EEC005A52F6 /* StdlibExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		F1B28A102216C5B0009EA3F9 /* MVVM+ReactiveSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVVM+ReactiveSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		F1B28A142216C714009EA3F9 /* OCDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCDefine.h; sourceTree = "<group>"; };
 		F1B28A152216C714009EA3F9 /* OCDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDefine.m; sourceTree = "<group>"; };
+		F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StdlibExtensions.swift; sourceTree = "<group>"; };
 		F3EB9CEA7AE746EADA2669B2 /* Pods-MVVM+ReactiveSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwiftTests/Pods-MVVM+ReactiveSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 				F1B28A102216C5B0009EA3F9 /* MVVM+ReactiveSwift-Bridging-Header.h */,
 				F1B28A142216C714009EA3F9 /* OCDefine.h */,
 				F1B28A152216C714009EA3F9 /* OCDefine.m */,
+				F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */,
 			);
 			path = "MVVM+ReactiveSwift";
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1716DB5221AB04E00020B40 /* ViewModel.swift in Sources */,
+				F1F999B1221B9EEC005A52F6 /* StdlibExtensions.swift in Sources */,
 				F1716DB3221AB03000020B40 /* UserService.swift in Sources */,
 				F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */,
 				F1B28A162216C714009EA3F9 /* OCDefine.m in Sources */,

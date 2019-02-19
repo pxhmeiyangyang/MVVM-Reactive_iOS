@@ -17,7 +17,7 @@ class EmailVC: UIViewController {
     private let emailConfirmationField = UITextField()
     private let termsSwitch = UISwitch()
     private let reasonLabel = UILabel()
-    private let submitButton = UIButton()
+    private let submitButton = UIButton(type: .system)
     private let userService = UserService()
     private var viewModel : ViewModel!
     
