@@ -22,6 +22,8 @@
 		F1F999B1221B9EEC005A52F6 /* StdlibExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */; };
 		F1F999B5221BA6CC005A52F6 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F999B4221BA6CC005A52F6 /* MainTabBarVC.swift */; };
 		F1F999B7221BA928005A52F6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F999B6221BA928005A52F6 /* LoginVC.swift */; };
+		F1F999C6221C0C23005A52F6 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F999C5221C0C23005A52F6 /* LoginVM.swift */; };
+		F1F999C8221C0C35005A52F6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F999C7221C0C35005A52F6 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StdlibExtensions.swift; sourceTree = "<group>"; };
 		F1F999B4221BA6CC005A52F6 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		F1F999B6221BA928005A52F6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F1F999C5221C0C23005A52F6 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		F1F999C7221C0C35005A52F6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		F3EB9CEA7AE746EADA2669B2 /* Pods-MVVM+ReactiveSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwiftTests/Pods-MVVM+ReactiveSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +153,7 @@
 		F1B289E12216AD82009EA3F9 /* MVVM+ReactiveSwift */ = {
 			isa = PBXGroup;
 			children = (
+				F1F999C4221C0C08005A52F6 /* Login */,
 				F1716DB4221AB04D00020B40 /* ViewModel.swift */,
 				F1716DB2221AB03000020B40 /* UserService.swift */,
 				F1B289E22216AD82009EA3F9 /* AppDelegate.swift */,
@@ -161,7 +166,6 @@
 				F1B28A152216C714009EA3F9 /* OCDefine.m */,
 				F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */,
 				F1F999B4221BA6CC005A52F6 /* MainTabBarVC.swift */,
-				F1F999B6221BA928005A52F6 /* LoginVC.swift */,
 			);
 			path = "MVVM+ReactiveSwift";
 			sourceTree = "<group>";
@@ -182,6 +186,16 @@
 				F1B28A042216AD83009EA3F9 /* Info.plist */,
 			);
 			path = "MVVM+ReactiveSwiftUITests";
+			sourceTree = "<group>";
+		};
+		F1F999C4221C0C08005A52F6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F1F999B6221BA928005A52F6 /* LoginVC.swift */,
+				F1F999C5221C0C23005A52F6 /* LoginVM.swift */,
+				F1F999C7221C0C35005A52F6 /* LoginModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +421,8 @@
 				F1F999B7221BA928005A52F6 /* LoginVC.swift in Sources */,
 				F1716DB3221AB03000020B40 /* UserService.swift in Sources */,
 				F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */,
+				F1F999C8221C0C35005A52F6 /* LoginModel.swift in Sources */,
+				F1F999C6221C0C23005A52F6 /* LoginVM.swift in Sources */,
 				F1F999B5221BA6CC005A52F6 /* MainTabBarVC.swift in Sources */,
 				F1B28A162216C714009EA3F9 /* OCDefine.m in Sources */,
 				F1B289E32216AD82009EA3F9 /* AppDelegate.swift in Sources */,
