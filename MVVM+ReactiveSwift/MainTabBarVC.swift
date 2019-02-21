@@ -31,7 +31,12 @@ class MainTabBarVC: UITabBarController {
         loginVC.tabBarItem.image = UIImage.init(named: "首页iconchat2")?.withRenderingMode(.alwaysOriginal)
         loginVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconchat3")?.withRenderingMode(.alwaysOriginal)
         
-        self.viewControllers = [loginVC,emailVC]
+        let loginExampleVC = LoginExampleVC()
+        loginExampleVC.title = "登录2页面"
+        loginExampleVC.tabBarItem.image = UIImage.init(named: "首页iconchat2")?.withRenderingMode(.alwaysOriginal)
+        loginExampleVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconchat3")?.withRenderingMode(.alwaysOriginal)
+        
+        self.viewControllers = [loginVC,loginExampleVC,emailVC]
         self.selectedIndex = 0
     }
     
