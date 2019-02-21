@@ -26,7 +26,7 @@ class MainTabBarVC: UITabBarController {
         emailVC.tabBarItem.image = UIImage.init(named: "首页iconaudition1")?.withRenderingMode(.alwaysOriginal)
         emailVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconaudition2")?.withRenderingMode(.alwaysOriginal)
         
-        let loginVC = LoginCatVC()
+        let loginVC = LoginVC()
         loginVC.title = "登录页面"
         loginVC.tabBarItem.image = UIImage.init(named: "首页iconchat2")?.withRenderingMode(.alwaysOriginal)
         loginVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconchat3")?.withRenderingMode(.alwaysOriginal)

@@ -10,9 +10,6 @@
 		18B0CD4441B00A57A1CCDB27 /* Pods_MVVM_ReactiveSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4836F4E719E5DA4053A9FC /* Pods_MVVM_ReactiveSwiftUITests.framework */; };
 		601BF23B0A943C03E70BE583 /* Pods_MVVM_ReactiveSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0A43BE75AA2BF8206A2004 /* Pods_MVVM_ReactiveSwiftTests.framework */; };
 		B3FDF57FD46A5344CC1AB318 /* Pods_MVVM_ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C9B624DDB74D412076990C /* Pods_MVVM_ReactiveSwift.framework */; };
-		F12D63E6221E538300ECFDD1 /* LoginCatVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D63E5221E538300ECFDD1 /* LoginCatVM.swift */; };
-		F12D63E8221E539B00ECFDD1 /* LoginCatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D63E7221E539B00ECFDD1 /* LoginCatModel.swift */; };
-		F12D63EA221E53B800ECFDD1 /* LoginCatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D63E9221E53B800ECFDD1 /* LoginCatVC.swift */; };
 		F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DAC221AABDA00020B40 /* EmailVC.swift */; };
 		F1716DB3221AB03000020B40 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DB2221AB03000020B40 /* UserService.swift */; };
 		F1716DB5221AB04E00020B40 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DB4221AB04D00020B40 /* ViewModel.swift */; };
@@ -55,9 +52,6 @@
 		9B4836F4E719E5DA4053A9FC /* Pods_MVVM_ReactiveSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_ReactiveSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD747EA95D7955CB65F5969C /* Pods-MVVM+ReactiveSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwift/Pods-MVVM+ReactiveSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E431C71D9C83C331E26DC66D /* Pods-MVVM+ReactiveSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwift/Pods-MVVM+ReactiveSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		F12D63E5221E538300ECFDD1 /* LoginCatVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCatVM.swift; sourceTree = "<group>"; };
-		F12D63E7221E539B00ECFDD1 /* LoginCatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCatModel.swift; sourceTree = "<group>"; };
-		F12D63E9221E53B800ECFDD1 /* LoginCatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCatVC.swift; sourceTree = "<group>"; };
 		F1716DAC221AABDA00020B40 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		F1716DB2221AB03000020B40 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F1716DB4221AB04D00020B40 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -134,16 +128,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F12D63E4221E536800ECFDD1 /* LoginCat */ = {
-			isa = PBXGroup;
-			children = (
-				F12D63E5221E538300ECFDD1 /* LoginCatVM.swift */,
-				F12D63E7221E539B00ECFDD1 /* LoginCatModel.swift */,
-				F12D63E9221E53B800ECFDD1 /* LoginCatVC.swift */,
-			);
-			path = LoginCat;
-			sourceTree = "<group>";
-		};
 		F1B289D62216AD82009EA3F9 = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +153,6 @@
 		F1B289E12216AD82009EA3F9 /* MVVM+ReactiveSwift */ = {
 			isa = PBXGroup;
 			children = (
-				F12D63E4221E536800ECFDD1 /* LoginCat */,
 				F1F999C4221C0C08005A52F6 /* Login */,
 				F1716DB4221AB04D00020B40 /* ViewModel.swift */,
 				F1716DB2221AB03000020B40 /* UserService.swift */,
@@ -436,13 +419,10 @@
 				F1716DB5221AB04E00020B40 /* ViewModel.swift in Sources */,
 				F1F999B1221B9EEC005A52F6 /* StdlibExtensions.swift in Sources */,
 				F1F999B7221BA928005A52F6 /* LoginVC.swift in Sources */,
-				F12D63EA221E53B800ECFDD1 /* LoginCatVC.swift in Sources */,
-				F12D63E6221E538300ECFDD1 /* LoginCatVM.swift in Sources */,
 				F1716DB3221AB03000020B40 /* UserService.swift in Sources */,
 				F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */,
 				F1F999C8221C0C35005A52F6 /* LoginModel.swift in Sources */,
 				F1F999C6221C0C23005A52F6 /* LoginVM.swift in Sources */,
-				F12D63E8221E539B00ECFDD1 /* LoginCatModel.swift in Sources */,
 				F1F999B5221BA6CC005A52F6 /* MainTabBarVC.swift in Sources */,
 				F1B28A162216C714009EA3F9 /* OCDefine.m in Sources */,
 				F1B289E32216AD82009EA3F9 /* AppDelegate.swift in Sources */,
