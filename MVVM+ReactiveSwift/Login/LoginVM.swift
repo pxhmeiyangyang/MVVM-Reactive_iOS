@@ -17,7 +17,7 @@ class LoginVM: NSObject {
     }()
     
     var loginAction : Action<(),String,AnyError>! //登录活动
-    var enableProducer : SignalProducer<Bool, NoError>!//信号生成器，登录按钮启用发送true，禁用发送false
+//    var enableProducer : SignalProducer<Bool, NoError>!//信号生成器，登录按钮启用发送true，禁用发送false
     var userNameProperty : MutableProperty<String?>!
     var passwordProperty : MutableProperty<String?>!
     
@@ -30,12 +30,13 @@ class LoginVM: NSObject {
     private func initialBind(){
         userNameProperty = MutableProperty(loginModel.userName)
         passwordProperty = MutableProperty(loginModel.password)
-        enableProducer = SignalProducer.combineLatest(userNameProperty.producer, passwordProperty.producer).map({ (account, password) -> Bool in
+        let enableProducer = SignalProducer.combineLatest(userNameProperty.producer, passwordProperty.producer).map({ (account, password) -> Bool in
             return account?.count ?? 0 > 5 && password?.count ?? 0 > 5
         })
         
-        loginAction = Action<(),String,AnyError>{_ in
-            return SignalProducer{ observer,disopration in
+        let property = Property(initial: false, then: enableProducer)
+        loginAction = Action<(),String,AnyError>(enabledIf: property){
+            return SignalProducer{observer, disposable in
                 observer.send(value: "登录成功")
                 observer.sendCompleted()
             }

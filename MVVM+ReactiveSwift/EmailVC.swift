@@ -109,7 +109,7 @@ class EmailVC: UIViewController {
         
         
         viewModel.submit.completed.observeValues {
-            print("ViewModel.submit: execution producer has completed.")
+            print("ViewModel.submit: execution producer has completed.\($0)")
         }
         
         viewModel.email.result.signal.observeValues {

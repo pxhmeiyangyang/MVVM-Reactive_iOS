@@ -71,16 +71,14 @@ class LoginVC: UIViewController {
         //密码控件显示内容跟数据模型保持一致
         passwordTF.text = viewModel.passwordProperty.value
         viewModel.passwordProperty <~ passwordTF.reactive.continuousTextValues.skipNil()
-        //将信号生成器的值同步给按钮状态
-        submitBTN.reactive.isEnabled <~ viewModel.enableProducer
-        
-//        submitBTN.reactive.pressed = CocoaAction(viewModel.loginAction)
+        //使用登录事件管理按钮状态
+        submitBTN.reactive.pressed = CocoaAction(viewModel.loginAction)
     }
     
     /// 监控所有消息
     private func consoleMessages(){
         viewModel.loginAction.completed.observeValues {
-            print("viewModel.loginAction: execution producer has completed.")
+            print("viewModel.loginAction: execution producer has completed")
         }
     }
 }
