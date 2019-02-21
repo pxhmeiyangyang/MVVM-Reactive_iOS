@@ -21,6 +21,11 @@ class MainTabBarVC: UITabBarController {
     
     /// 添加工程子VC
     private func addSubViewControllers(){
+        let bookListVC = BookListVC()
+        bookListVC.title = "书本列表"
+        bookListVC.tabBarItem.image = UIImage.init(named: "首页iconaudition1")?.withRenderingMode(.alwaysOriginal)
+        bookListVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconaudition2")?.withRenderingMode(.alwaysOriginal)
+        
         let emailVC = EmailVC()
         emailVC.title = "邮箱校验"
         emailVC.tabBarItem.image = UIImage.init(named: "首页iconaudition1")?.withRenderingMode(.alwaysOriginal)
@@ -36,7 +41,7 @@ class MainTabBarVC: UITabBarController {
         loginExampleVC.tabBarItem.image = UIImage.init(named: "首页iconchat2")?.withRenderingMode(.alwaysOriginal)
         loginExampleVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconchat3")?.withRenderingMode(.alwaysOriginal)
         
-        self.viewControllers = [loginVC,loginExampleVC,emailVC]
+        self.viewControllers = [bookListVC,loginVC,loginExampleVC,emailVC]
         self.selectedIndex = 0
     }
     
