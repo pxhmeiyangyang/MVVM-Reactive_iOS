@@ -185,21 +185,8 @@
 		F1B289E12216AD82009EA3F9 /* MVVM+ReactiveSwift */ = {
 			isa = PBXGroup;
 			children = (
-				F17A245A221E99B900931A0F /* BookList */,
-				F17A2453221E7CE100931A0F /* LoginExample */,
-				F1F999C4221C0C08005A52F6 /* Login */,
-				F1716DB4221AB04D00020B40 /* ViewModel.swift */,
-				F1716DB2221AB03000020B40 /* UserService.swift */,
-				F1B289E22216AD82009EA3F9 /* AppDelegate.swift */,
-				F1716DAC221AABDA00020B40 /* EmailVC.swift */,
-				F1B289E92216AD83009EA3F9 /* Assets.xcassets */,
-				F1B289EB2216AD83009EA3F9 /* LaunchScreen.storyboard */,
-				F1B289EE2216AD83009EA3F9 /* Info.plist */,
-				F1B28A102216C5B0009EA3F9 /* MVVM+ReactiveSwift-Bridging-Header.h */,
-				F1B28A142216C714009EA3F9 /* OCDefine.h */,
-				F1B28A152216C714009EA3F9 /* OCDefine.m */,
-				F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */,
-				F1F999B4221BA6CC005A52F6 /* MainTabBarVC.swift */,
+				F1EC37BF221FA99900FDE3C7 /* ViewControllers */,
+				F1EC37BE221FA98800FDE3C7 /* Support */,
 			);
 			path = "MVVM+ReactiveSwift";
 			sourceTree = "<group>";
@@ -220,6 +207,43 @@
 				F1B28A042216AD83009EA3F9 /* Info.plist */,
 			);
 			path = "MVVM+ReactiveSwiftUITests";
+			sourceTree = "<group>";
+		};
+		F1EC37BE221FA98800FDE3C7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F1B289E22216AD82009EA3F9 /* AppDelegate.swift */,
+				F1B289E92216AD83009EA3F9 /* Assets.xcassets */,
+				F1B289EB2216AD83009EA3F9 /* LaunchScreen.storyboard */,
+				F1B289EE2216AD83009EA3F9 /* Info.plist */,
+				F1B28A102216C5B0009EA3F9 /* MVVM+ReactiveSwift-Bridging-Header.h */,
+				F1B28A142216C714009EA3F9 /* OCDefine.h */,
+				F1B28A152216C714009EA3F9 /* OCDefine.m */,
+				F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		F1EC37BF221FA99900FDE3C7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1F999B4221BA6CC005A52F6 /* MainTabBarVC.swift */,
+				F1EC37C0221FA9AB00FDE3C7 /* Email */,
+				F17A245A221E99B900931A0F /* BookList */,
+				F17A2453221E7CE100931A0F /* LoginExample */,
+				F1F999C4221C0C08005A52F6 /* Login */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F1EC37C0221FA9AB00FDE3C7 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				F1716DB4221AB04D00020B40 /* ViewModel.swift */,
+				F1716DB2221AB03000020B40 /* UserService.swift */,
+				F1716DAC221AABDA00020B40 /* EmailVC.swift */,
+			);
+			path = Email;
 			sourceTree = "<group>";
 		};
 		F1F999C4221C0C08005A52F6 /* Login */ = {
