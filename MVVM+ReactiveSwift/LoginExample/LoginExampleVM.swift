@@ -12,14 +12,14 @@ import ReactiveSwift
 import ReactiveCocoa
 /// Login 示例 view model
 class LoginExampleVM {
-    var dataModel = LoginModel()
-    let usernameProperty: MutableProperty<String?>
-    let passwordProperty: MutableProperty<String?>
+    var dataModel = LoginExampleModel()
+    let usernameProperty: DynamicProperty<String?>
+    let passwordProperty: DynamicProperty<String?>
     let logAction: Action<(),Bool,NoError>
     
     init() {
-        usernameProperty = MutableProperty(dataModel.userName)
-        passwordProperty = MutableProperty(dataModel.password)
+        usernameProperty = DynamicProperty<String?>(object: dataModel, keyPath: #keyPath(LoginExampleModel.username))
+        passwordProperty = DynamicProperty<String?>(object: dataModel, keyPath: #keyPath(LoginExampleModel.password))
         let validProperty = MutableProperty.combineLatest(usernameProperty, passwordProperty).map { (userName,password) -> Bool in
             return userName?.count ?? 0 >= 5 && password?.count ?? 0 >= 6
         }

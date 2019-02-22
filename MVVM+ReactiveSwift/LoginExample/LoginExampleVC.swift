@@ -61,11 +61,8 @@ class LoginExampleVC: UIViewController {
     
     /// 绑定模型
     private func bindModels(){
-        usernameTF.text = viewModel.usernameProperty.value
-        passwordTF.text = viewModel.passwordProperty.value
-        
-        viewModel.usernameProperty <~ usernameTF.reactive.continuousTextValues.skipNil()
-        viewModel.passwordProperty <~ passwordTF.reactive.continuousTextValues.skipNil()
+        BindingTarget(object: viewModel.dataModel, keyPath: #keyPath(LoginExampleModel.username)) <~ usernameTF.reactive.continuousTextValues
+        BindingTarget(object: viewModel.dataModel, keyPath: #keyPath(LoginExampleModel.password)) <~ passwordTF.reactive.continuousTextValues
         submitBtn.reactive.pressed = CocoaAction<UIButton>(viewModel.logAction)
     }
     

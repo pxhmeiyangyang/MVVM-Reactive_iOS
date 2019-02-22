@@ -9,6 +9,7 @@
 import UIKit
 
 /// login示例模型
+@objcMembers
 class LoginExampleModel: NSObject {
     var username: String?
     var password: String?
