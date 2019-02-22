@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 登录页面的viewModel
 class MRLoginVM: NSObject {
 
 }

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/// 登录模型
+@objcMembers
 class MRLoginModel: NSObject {
-
+    var username: String?
+    var password: String?
 }
