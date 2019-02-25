@@ -5,7 +5,7 @@
 >- 1、创建一个新的swift iOS App工程
 >- 2、commit id: f71ed62e265e2d0ef6922dfe94a5f446ce43dff6
 
-### v1.1 工程简介
+### 1.1 工程简介
 
 >一、此项目为MVVM+Reactive+swift4.0的学习项目
 >
@@ -26,7 +26,7 @@
 
 
 
-###v1.2 登录界面实现
+###1.2 登录界面实现
 
 实现效果如下：
 ![conv_ops](https://github.com/pxhmeiyangyang/MVVM-Reactive_iOS/blob/master/MarkDown/myyView.gif)
@@ -229,5 +229,5 @@ class MRLoginVC: MRBaseViewController {
 5、[完整代码下载](https://github.com/pxhmeiyangyang/MVVM-Reactive_iOS)
 /MVVM+ReactiveSwift/ViewControllers/Login&Register文件夹下为以上代码
 
-### v1.3 喜欢的话请star一下，如有错误或疑问请留言
+### 1.3 喜欢的话请star一下，如有错误或疑问请留言
 
