@@ -50,7 +50,8 @@ class MRLoginVC: MRBaseViewController {
         loginBtn.snp.makeConstraints { (make) in
             make.left.equalTo(35)
             make.right.equalTo(-35)
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-100)
         }
         
         passwordTF.snp.makeConstraints { (make) in
