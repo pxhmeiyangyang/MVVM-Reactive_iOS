@@ -11,7 +11,7 @@
 >
 >[MVVM介绍](https://baike.baidu.com/item/MVVM/96310?fr=aladdin)
 >
-![avatar]()
+![avatar](https://github.com/pxhmeiyangyang/MVVM-Reactive_iOS/blob/master/MarkDown/660px-MVVMPattern.png)
 >最近在Review项目的代码发现一个严重的问题，成吨的代码和复杂的结构看的人都傻了，于是决定学习一下MVVM+RAC。
 >
 >二、工程实现进度预期：
@@ -26,7 +26,7 @@
 
 ###v1.2 登录界面实现
 实现效果如下：
-![conv_ops]()
+![conv_ops](https://github.com/pxhmeiyangyang/MVVM-Reactive_iOS/blob/master/MarkDown/myyView.gif)
 1、登录数据模型
 
 声明为@objcMembers  OC数据类型，方便后续绑定模型
