@@ -47,7 +47,7 @@ class MRLoginVC: MRBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "登录"
         // Do any additional setup after loading the view.
     }
     
@@ -96,6 +96,7 @@ class MRLoginVC: MRBaseViewController {
                 switch result{
                 case .success(_):
                     print("登录成功")
+                    self?.dismiss(animated: true, completion: nil)
                 case .failure(_):
                     print("登录失败")
                 }

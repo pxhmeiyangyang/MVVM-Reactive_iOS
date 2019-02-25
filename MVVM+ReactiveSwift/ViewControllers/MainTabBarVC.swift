@@ -10,13 +10,21 @@ import UIKit
 
 /// 工程核心界面MainTabbarViewController
 class MainTabBarVC: UITabBarController {
-
+    
+    /// 是否登录
+    var isLogin: Bool = false
+    
     /// 单例对象
     static let sharedInstance = MainTabBarVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubViewControllers()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
+            self.addSubViewControllers()
+        }
+        if !isLogin {
+            presentToLogin()
+        }
     }
     
     /// 添加工程子VC
@@ -45,4 +53,11 @@ class MainTabBarVC: UITabBarController {
         self.selectedIndex = 0
     }
     
+    
+    /// 跳转到登录界面
+    private func presentToLogin(){
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+            self.present(UINavigationController.init(rootViewController: MRLoginVC()), animated: false, completion: nil)
+        }
+    }
 }
