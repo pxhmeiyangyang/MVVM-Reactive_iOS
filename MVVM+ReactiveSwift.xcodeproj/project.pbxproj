@@ -10,6 +10,7 @@
 		18B0CD4441B00A57A1CCDB27 /* Pods_MVVM_ReactiveSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4836F4E719E5DA4053A9FC /* Pods_MVVM_ReactiveSwiftUITests.framework */; };
 		601BF23B0A943C03E70BE583 /* Pods_MVVM_ReactiveSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0A43BE75AA2BF8206A2004 /* Pods_MVVM_ReactiveSwiftTests.framework */; };
 		B3FDF57FD46A5344CC1AB318 /* Pods_MVVM_ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C9B624DDB74D412076990C /* Pods_MVVM_ReactiveSwift.framework */; };
+		F13C97512223CDC500FCA76B /* MRBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */; };
 		F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DAC221AABDA00020B40 /* EmailVC.swift */; };
 		F1716DB3221AB03000020B40 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DB2221AB03000020B40 /* UserService.swift */; };
 		F1716DB5221AB04E00020B40 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DB4221AB04D00020B40 /* ViewModel.swift */; };
@@ -66,6 +67,7 @@
 		9B4836F4E719E5DA4053A9FC /* Pods_MVVM_ReactiveSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_ReactiveSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD747EA95D7955CB65F5969C /* Pods-MVVM+ReactiveSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwift/Pods-MVVM+ReactiveSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E431C71D9C83C331E26DC66D /* Pods-MVVM+ReactiveSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwift/Pods-MVVM+ReactiveSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRBaseViewModel.swift; sourceTree = "<group>"; };
 		F1716DAC221AABDA00020B40 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		F1716DB2221AB03000020B40 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F1716DB4221AB04D00020B40 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				F17A2453221E7CE100931A0F /* LoginExample */,
 				F1F999C4221C0C08005A52F6 /* Login */,
 				F1EC37DD22200ABE00FDE3C7 /* MRBaseViewController.swift */,
+				F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				F17A245E221E99EB00931A0F /* BookListVC.swift in Sources */,
 				F1EC37DE22200ABE00FDE3C7 /* MRBaseViewController.swift in Sources */,
 				F17A2455221E7D0C00931A0F /* LoginExampleVC.swift in Sources */,
+				F13C97512223CDC500FCA76B /* MRBaseViewModel.swift in Sources */,
 				F17A2460221E99FF00931A0F /* BookListVM.swift in Sources */,
 				F1716DB3221AB03000020B40 /* UserService.swift in Sources */,
 				F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */,

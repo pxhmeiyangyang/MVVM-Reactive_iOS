@@ -8,6 +8,11 @@
 
 import UIKit
 
+import Result
+import ReactiveCocoa
+import ReactiveSwift
+
+/// 登录页面
 class MRLoginVC: MRBaseViewController {
 
     private let viewModel = MRLoginVM()
@@ -72,8 +77,30 @@ class MRLoginVC: MRBaseViewController {
     }
     
     override func bindModels() {
+        BindingTarget(object: viewModel.loginModel, keyPath: #keyPath(MRLoginModel.username)) <~ userNameTF.inputTextField.reactive.continuousTextValues
         
- 
+        BindingTarget(object: viewModel.loginModel, keyPath: #keyPath(MRLoginModel.password)) <~ passwordTF.inputTextField.reactive.continuousTextValues
+        
+        loginBtn.reactive.isEnabled <~ viewModel.loginEnableProducer
+        
+        passwordTF.inputTextField.reactive.isSecureTextEntry <~ DynamicProperty<Bool>.init(object: passwordTF.eyesBtn, keyPath: #keyPath(UIButton.isSelected))
+        
+        passwordTF.eyesBtn.reactive.controlEvents(.touchUpInside).observeValues { $0.isSelected = !$0.isSelected }
+        //注册按钮点击事件
+        registerBtn.reactive.controlEvents(.touchUpInside).observeValues { (sender) in
+            print("注册按钮点击事件")
+        }
+        //点击登录按钮触发登录事件
+        loginBtn.reactive.controlEvents(.touchUpInside).observeValues { [weak self](sender) in
+            self?.viewModel.loginActionPtoducer.startWithResult({ (result) in
+                switch result{
+                case .success(_):
+                    print("登录成功")
+                case .failure(_):
+                    print("登录失败")
+                }
+            })
+        }
     }
     
 }

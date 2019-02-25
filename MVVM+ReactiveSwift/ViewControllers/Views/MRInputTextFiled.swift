@@ -29,7 +29,6 @@ class MRInputTextFiled: UIView {
     lazy var inputTextField: UITextField = {
         let textField = UITextField()
         textField.font = UIFont.init(fontName: SystemFontName.Regular, size: 14)
-        textField.clearButtonMode = UITextField.ViewMode.whileEditing
         textField.attributedPlaceholder = NSAttributedString.init(string: type == .account ? "请输入您的手机号" : "请输入您的登录密码", attributes: [NSAttributedString.Key.foregroundColor : UIColor.init(rgb: 0xBCBCBC)])
         addSubview(textField)
         return textField
@@ -81,7 +80,7 @@ class MRInputTextFiled: UIView {
             make.centerY.equalTo(self)
             make.right.equalTo(-14)
         }
-        
+        inputTextField.clearButtonMode = UITextField.ViewMode.whileEditing
         hLineView.snp.makeConstraints { (make) in
             make.height.equalTo(0.5)
             make.left.right.bottom.equalTo(0)
@@ -101,13 +100,14 @@ class MRInputTextFiled: UIView {
             make.centerY.equalTo(self)
             make.width.height.equalTo(24)
         }
+        eyesBtn.isSelected = true
         
         inputTextField.snp.makeConstraints { (make) in
             make.left.equalTo(iconIV.snp.right).offset(15)
             make.centerY.equalTo(self)
             make.right.equalTo(-14)
         }
-        
+        inputTextField.clearButtonMode = UITextField.ViewMode.never
         hLineView.snp.makeConstraints { (make) in
             make.height.equalTo(0.5)
             make.left.right.bottom.equalTo(0)
