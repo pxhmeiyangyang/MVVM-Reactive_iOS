@@ -229,4 +229,5 @@ class MRLoginVC: MRBaseViewController {
 5、[完整代码下载](https://github.com/pxhmeiyangyang/MVVM-Reactive_iOS)
 /MVVM+ReactiveSwift/ViewControllers/Login&Register文件夹下为以上代码
 
+### v1.3 喜欢的话请star一下，如有错误或疑问请留言
 
