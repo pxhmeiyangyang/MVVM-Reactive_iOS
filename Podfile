@@ -12,6 +12,8 @@ target 'MVVM+ReactiveSwift' do
   
   pod 'ReactiveCocoa'
   
+  pod 'HandyJSON'
+  
   target 'MVVM+ReactiveSwiftTests' do
     inherit! :search_paths
     # Pods for testing
