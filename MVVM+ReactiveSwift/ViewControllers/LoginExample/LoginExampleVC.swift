@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Result
+
 import ReactiveCocoa
 import ReactiveSwift
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Result
+
 import ReactiveCocoa
 import ReactiveSwift
 
@@ -67,10 +67,10 @@ class LoginVC: UIViewController {
     private func bindModels(){
         //账号控件显示内容跟数据模型保持一致
         userNameTF.text = viewModel.userNameProperty.value
-        viewModel.userNameProperty <~ userNameTF.reactive.continuousTextValues.skipNil()
+        viewModel.userNameProperty <~ userNameTF.reactive.continuousTextValues
         //密码控件显示内容跟数据模型保持一致
         passwordTF.text = viewModel.passwordProperty.value
-        viewModel.passwordProperty <~ passwordTF.reactive.continuousTextValues.skipNil()
+        viewModel.passwordProperty <~ passwordTF.reactive.continuousTextValues
         //使用登录事件管理按钮状态
         submitBTN.reactive.pressed = CocoaAction(viewModel.loginAction)
     }

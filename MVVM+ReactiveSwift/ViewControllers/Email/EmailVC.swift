@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Result
+
 import ReactiveSwift
 import ReactiveCocoa
 import SnapKit
@@ -91,8 +91,8 @@ class EmailVC: UIViewController {
         termsSwitch.isOn = false
         //setup bindings with the interactive controls
         viewModel.email <~ emailField.reactive
-            .continuousTextValues.skipNil()
-        viewModel.emailConfirmation <~ emailConfirmationField.reactive.continuousTextValues.skipNil()
+            .continuousTextValues
+        viewModel.emailConfirmation <~ emailConfirmationField.reactive.continuousTextValues
         viewModel.termsAccepted <~ termsSwitch.reactive.isOnValues
         // Setup bindings with the invalidation reason label.
         reasonLabel.reactive.text <~ viewModel.reasons
@@ -112,12 +112,12 @@ class EmailVC: UIViewController {
             print("ViewModel.submit: execution producer has completed.\($0)")
         }
         
-        viewModel.email.result.signal.observeValues {
-            print("ViewModel.email: Validation result - \($0 != nil ? "\($0!)" : "No validation has ever been performed.")")
+        viewModel.email.result.signal.observeValues {_ in
+//            print("ViewModel.email: Validation result - \($0 != nil ? "\($0!)" : "No validation has ever been performed.")")
         }
         
-        viewModel.emailConfirmation.result.signal.observeValues {
-            print("ViewModel.emailConfirmation: Validation result - \($0 != nil ? "\($0!)" : "No validation has ever been performed.")")
+        viewModel.emailConfirmation.result.signal.observeValues {_ in
+//            print("ViewModel.emailConfirmation: Validation result - \($0 != nil ? "\($0!)" : "No validation has ever been performed.")")
         }
         
     }

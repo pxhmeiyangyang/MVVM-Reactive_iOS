@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Result
+
 import ReactiveSwift
 import ReactiveCocoa
 /// 登录viewmodel
@@ -16,8 +16,8 @@ class LoginVM: NSObject {
         return LoginModel()
     }()
     
-    var loginAction : Action<(),String,AnyError>! //登录活动
-//    var enableProducer : SignalProducer<Bool, NoError>!//信号生成器，登录按钮启用发送true，禁用发送false
+    var loginAction : Action<(),String,Error>! //登录活动
+//    var enableProducer : SignalProducer<Bool, Never>!//信号生成器，登录按钮启用发送true，禁用发送false
     var userNameProperty : MutableProperty<String?>!
     var passwordProperty : MutableProperty<String?>!
     
@@ -35,7 +35,7 @@ class LoginVM: NSObject {
         })
         
         let property = Property(initial: false, then: enableProducer)
-        loginAction = Action<(),String,AnyError>(enabledIf: property){
+        loginAction = Action<(),String,Error>(enabledIf: property){
             return SignalProducer{observer, disposable in
                 observer.send(value: "登录成功")
                 observer.sendCompleted()

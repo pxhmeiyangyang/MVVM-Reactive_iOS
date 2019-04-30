@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Result
+
 import ReactiveSwift
 import ReactiveCocoa
 /// Login 示例 view model
@@ -15,7 +15,7 @@ class LoginExampleVM {
     var dataModel = LoginExampleModel()
     let usernameProperty: DynamicProperty<String?>
     let passwordProperty: DynamicProperty<String?>
-    let logAction: Action<(),Bool,NoError>
+    let logAction: Action<(),Bool,Never>
     
     init() {
         usernameProperty = DynamicProperty<String?>(object: dataModel, keyPath: #keyPath(LoginExampleModel.username))
@@ -24,7 +24,7 @@ class LoginExampleVM {
             return userName?.count ?? 0 >= 5 && password?.count ?? 0 >= 6
         }
 
-        logAction = Action<(),Bool,NoError>(enabledIf: validProperty, execute: { _ in
+        logAction = Action<(),Bool,Never>(enabledIf: validProperty, execute: { _ in
             return SignalProducer{ observer,disposable in
                 observer.send(value: true)
                 observer.sendCompleted()

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Result
+
 import ReactiveCocoa
 import ReactiveSwift
 
@@ -15,8 +15,8 @@ import ReactiveSwift
 class MRLoginVM: MRBaseViewModel {
 
     let loginModel = MRLoginModel()
-    var loginEnableProducer : SignalProducer<Bool,NoError>!
-    var loginActionPtoducer : SignalProducer<Bool,NoError>!
+    var loginEnableProducer : SignalProducer<Bool,Never>!
+    var loginActionPtoducer : SignalProducer<Bool,Never>!
     
     override init() {
         super.init()
@@ -28,7 +28,7 @@ class MRLoginVM: MRBaseViewModel {
         loginEnableProducer = SignalProducer.combineLatest(usernameProperty, passwordProperty).map({ (username,password) -> Bool in
             return username?.count ?? 0 >= 5 && password?.count ?? 0 >= 5
         })
-        loginActionPtoducer = SignalProducer<Bool,NoError>.init({ [weak self] (observe,disposable) in
+        loginActionPtoducer = SignalProducer<Bool,Never>.init({ [weak self] (observe,disposable) in
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
                 observe.send(value: true)
                 observe.sendCompleted()

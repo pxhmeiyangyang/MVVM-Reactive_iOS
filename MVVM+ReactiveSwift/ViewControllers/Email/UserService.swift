@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Result
+
 import ReactiveSwift
 
 class UserService {
-    let (requestSignal, requestObserver) = Signal<String, NoError>.pipe()
+    let (requestSignal, requestObserver) = Signal<String, Never>.pipe()
     
-    func canUseUsername(_ string : String)->SignalProducer<Bool, NoError>{
+    func canUseUsername(_ string : String)->SignalProducer<Bool, Never>{
         return SignalProducer{ observer, disposable in
             self.requestObserver.send(value: string)
             observer.send(value: true)

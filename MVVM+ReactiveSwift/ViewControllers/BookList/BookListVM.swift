@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Result
+
 import ReactiveCocoa
 import ReactiveSwift
 /// book list view model
 class BookListVM: NSObject {
     var models = [BookListModel]()
-    var bookAction: Action<(),[BookListModel],AnyError>!
+    var bookAction: Action<(),[BookListModel],Error>!
     private let data = [["test1":"1"],["test2":"3"],["test3":"3"],["test4":"4"],["test5":"5"],["test6":"6"],["test7":"7"],] //模拟网络请求数据
     override init() {
         super.init()
@@ -21,8 +21,8 @@ class BookListVM: NSObject {
     }
     
     private func initialBind(){
-        bookAction = Action<(),[BookListModel],AnyError>{  (_) -> SignalProducer<[BookListModel], AnyError> in
-            SignalProducer<[[String : String]], AnyError>({observer, disposable in
+        bookAction = Action<(),[BookListModel],Error>{  (_) -> SignalProducer<[BookListModel], Error> in
+            SignalProducer<[[String : String]], Error>({observer, disposable in
                 //模拟网络请求 将请求数据通过信号发送出去
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
                     observer.send(value: self.data)

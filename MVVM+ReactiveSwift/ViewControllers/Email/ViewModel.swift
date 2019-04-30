@@ -8,7 +8,7 @@
 
 import UIKit
 
-import Result
+
 import ReactiveSwift
 
 class ViewModel {
@@ -27,7 +27,7 @@ class ViewModel {
     
     let submit: Action<(), (), FormError>
     
-    let reasons: Signal<String, NoError>
+    let reasons: Signal<String, Never>
     
     init(userService: UserService) {
         // email: ValidatingProperty<String, FormError>
@@ -64,9 +64,17 @@ class ViewModel {
         submit = Action(unwrapping: validatedEmail) { (email: String) in
             let username = email.replacingOccurrences(of: "@reactivecocoa.io", with: "")
             
-            return userService.canUseUsername(username)
-                .promoteError(FormError.self)
-                .attemptMap { Result<(), FormError>($0 ? () : nil, failWith: .usernameUnavailable) }
+//            return userService.canUseUsername(username)
+//                .promoteError(FormError.self)
+//                .attemptMap {
+//                    Result<(), FormError>($0 ? () : nil, failWith: .usernameUnavailable)
+//
+//            }
+//            return userService.canUseUsername(username)
+            return SignalProducer<(), ViewModel.FormError>.init({ (observer, disposble) in
+                observer.send(value: ())
+                observer.sendCompleted()
+            })
         }
         
         // `reason` is an aggregate of latest validation error for the UI to display.
