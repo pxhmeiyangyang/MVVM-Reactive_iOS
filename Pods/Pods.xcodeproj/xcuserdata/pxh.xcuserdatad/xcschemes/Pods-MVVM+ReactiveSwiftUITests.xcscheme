@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A2008984D3A2C96AD369DC3573D730B6"
+               BlueprintIdentifier = "FE9DCED4564CE76B64BBF2F1F98B9161"
                BuildableName = "Pods_MVVM_ReactiveSwiftUITests.framework"
                BlueprintName = "Pods-MVVM+ReactiveSwiftUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A2008984D3A2C96AD369DC3573D730B6"
+            BlueprintIdentifier = "FE9DCED4564CE76B64BBF2F1F98B9161"
             BuildableName = "Pods_MVVM_ReactiveSwiftUITests.framework"
             BlueprintName = "Pods-MVVM+ReactiveSwiftUITests"
             ReferencedContainer = "container:Pods.xcodeproj">
