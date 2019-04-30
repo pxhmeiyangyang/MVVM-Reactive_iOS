@@ -12,7 +12,7 @@ target 'MVVM+ReactiveSwift' do
   
   pod 'ReactiveCocoa'
   
-  pod 'HandyJSON'
+  pod 'HandyJSON', '~> 5.0.0-beta.1'
   
   target 'MVVM+ReactiveSwiftTests' do
     inherit! :search_paths

@@ -1,5 +1,5 @@
 PODS:
-  - HandyJSON (4.2.1)
+  - HandyJSON (5.0.0-beta.1)
   - ReactiveCocoa (10.0.0):
     - ReactiveSwift (~> 6.0)
   - ReactiveSwift (6.0.0)
@@ -9,7 +9,7 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
-  - HandyJSON
+  - HandyJSON (~> 5.0.0-beta.1)
   - ReactiveCocoa
   - SnapKit
   - YYKit
@@ -23,12 +23,12 @@ SPEC REPOS:
     - YYKit
 
 SPEC CHECKSUMS:
-  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
+  HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
   ReactiveCocoa: 6d4c37ba236f5d9a7a55b2172cd09f19ba85f574
   ReactiveSwift: 24b7ed245617bbfd30ee0c87779b6c64ac1b4518
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 85c33c0b0441d40892e5d0b2fe73e6887a80762d
+PODFILE CHECKSUM: 67cb58f025980cca5fb40124f831184dcc1d8aca
 
 COCOAPODS: 1.6.1
