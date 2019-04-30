@@ -14,7 +14,11 @@ import ReactiveSwift
 /// 登录页面的viewModel
 class MRLoginVM: MRBaseViewModel {
 
-    let loginModel = MRLoginModel()
+    /// 登录数据模型
+    lazy var loginModel = {
+        return MRLoginModel()
+    }()
+    
     var loginEnableProducer : SignalProducer<Bool,Never>!
     var loginActionPtoducer : SignalProducer<Bool,Never>!
     
