@@ -182,11 +182,35 @@
 		F12D5521227E815A00F3394A /* ReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				F12D5522227E819200F3394A /* MRReactiveCocoaVC.swift */,
-				F12D5524227E81A300F3394A /* MRReactiveCocoaVM.swift */,
+				F12D552A227E942700F3394A /* M */,
+				F12D552B227E943400F3394A /* V */,
+				F12D552C227E943A00F3394A /* VM */,
 				F12D5528227E891400F3394A /* MRReactiveCocoaTCell.swift */,
 			);
 			path = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		F12D552A227E942700F3394A /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		F12D552B227E943400F3394A /* V */ = {
+			isa = PBXGroup;
+			children = (
+				F12D5522227E819200F3394A /* MRReactiveCocoaVC.swift */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		F12D552C227E943A00F3394A /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				F12D5524227E81A300F3394A /* MRReactiveCocoaVM.swift */,
+			);
+			path = VM;
 			sourceTree = "<group>";
 		};
 		F17A2453221E7CE100931A0F /* LoginExample */ = {
