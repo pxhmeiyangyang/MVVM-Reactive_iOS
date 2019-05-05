@@ -14,9 +14,6 @@
 		F12D5523227E819200F3394A /* MRReactiveCocoaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5522227E819200F3394A /* MRReactiveCocoaVC.swift */; };
 		F12D5525227E81A300F3394A /* MRReactiveCocoaVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5524227E81A300F3394A /* MRReactiveCocoaVM.swift */; };
 		F12D5527227E85A300F3394A /* MRBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5526227E85A300F3394A /* MRBaseTableViewCell.swift */; };
-		F12D5529227E891400F3394A /* MRReactiveCocoaTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5528227E891400F3394A /* MRReactiveCocoaTCell.swift */; };
-		F12D5530227EB28300F3394A /* MRRACKVOVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D552F227EB28300F3394A /* MRRACKVOVM.swift */; };
-		F12D5532227EB2A300F3394A /* MRRACKVOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5531227EB2A300F3394A /* MRRACKVOVC.swift */; };
 		F12D5534227EB63D00F3394A /* MRTempObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5533227EB63D00F3394A /* MRTempObject.swift */; };
 		F13C97512223CDC500FCA76B /* MRBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */; };
 		F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DAC221AABDA00020B40 /* EmailVC.swift */; };
@@ -79,9 +76,6 @@
 		F12D5522227E819200F3394A /* MRReactiveCocoaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRReactiveCocoaVC.swift; sourceTree = "<group>"; };
 		F12D5524227E81A300F3394A /* MRReactiveCocoaVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRReactiveCocoaVM.swift; sourceTree = "<group>"; };
 		F12D5526227E85A300F3394A /* MRBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRBaseTableViewCell.swift; sourceTree = "<group>"; };
-		F12D5528227E891400F3394A /* MRReactiveCocoaTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRReactiveCocoaTCell.swift; sourceTree = "<group>"; };
-		F12D552F227EB28300F3394A /* MRRACKVOVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRRACKVOVM.swift; sourceTree = "<group>"; };
-		F12D5531227EB2A300F3394A /* MRRACKVOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRRACKVOVC.swift; sourceTree = "<group>"; };
 		F12D5533227EB63D00F3394A /* MRTempObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTempObject.swift; sourceTree = "<group>"; };
 		F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRBaseViewModel.swift; sourceTree = "<group>"; };
 		F1716DAC221AABDA00020B40 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
@@ -191,7 +185,6 @@
 				F12D552A227E942700F3394A /* M */,
 				F12D552B227E943400F3394A /* V */,
 				F12D552C227E943A00F3394A /* VM */,
-				F12D5528227E891400F3394A /* MRReactiveCocoaTCell.swift */,
 			);
 			path = ReactiveCocoa;
 			sourceTree = "<group>";
@@ -208,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				F12D5522227E819200F3394A /* MRReactiveCocoaVC.swift */,
-				F12D5531227EB2A300F3394A /* MRRACKVOVC.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -217,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				F12D5524227E81A300F3394A /* MRReactiveCocoaVM.swift */,
-				F12D552F227EB28300F3394A /* MRRACKVOVM.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -592,14 +583,12 @@
 			files = (
 				F1716DB5221AB04E00020B40 /* ViewModel.swift in Sources */,
 				F1EC37D7221FF9EB00FDE3C7 /* UIFont+MRExtension.swift in Sources */,
-				F12D5529227E891400F3394A /* MRReactiveCocoaTCell.swift in Sources */,
 				F1EC37D9221FFAB200FDE3C7 /* UIColor+MRExtension.swift in Sources */,
 				F1F999B1221B9EEC005A52F6 /* StdlibExtensions.swift in Sources */,
 				F12D5523227E819200F3394A /* MRReactiveCocoaVC.swift in Sources */,
 				F1F999B7221BA928005A52F6 /* LoginVC.swift in Sources */,
 				F17A245E221E99EB00931A0F /* BookListVC.swift in Sources */,
 				F1EC37DE22200ABE00FDE3C7 /* MRBaseViewController.swift in Sources */,
-				F12D5532227EB2A300F3394A /* MRRACKVOVC.swift in Sources */,
 				F17A2455221E7D0C00931A0F /* LoginExampleVC.swift in Sources */,
 				F12D551F227E7DCB00F3394A /* MRMVVMProtocol.swift in Sources */,
 				F13C97512223CDC500FCA76B /* MRBaseViewModel.swift in Sources */,
@@ -611,7 +600,6 @@
 				F1EC37D5221FF5F400FDE3C7 /* UIButton+MRCustom.swift in Sources */,
 				F12D5525227E81A300F3394A /* MRReactiveCocoaVM.swift in Sources */,
 				F1EC37CD221FF40700FDE3C7 /* MRLoginModel.swift in Sources */,
-				F12D5530227EB28300F3394A /* MRRACKVOVM.swift in Sources */,
 				F1EC37DC2220008D00FDE3C7 /* MRInputTextFiled.swift in Sources */,
 				F12D5527227E85A300F3394A /* MRBaseTableViewCell.swift in Sources */,
 				F1F999C6221C0C23005A52F6 /* LoginVM.swift in Sources */,

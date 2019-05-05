@@ -38,18 +38,4 @@ class MRReactiveCocoaVM: MRBaseViewModel {
     }
 }
 
-// MARK: - UITableViewDataSource
-extension MRReactiveCocoaVM: UITableViewDataSource{
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datas.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MRReactiveCocoaTCell", for: indexPath) as? MRReactiveCocoaTCell else { return UITableViewCell() }
-        cell.textLabel?.text = self.datas[indexPath.row]
-        cell.accessoryType = .disclosureIndicator
-        return cell
-    }
-        
-}
+

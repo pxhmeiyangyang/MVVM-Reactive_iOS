@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
 
 /// Reactive cocoa view controller
 class MRReactiveCocoaVC: MRBaseViewController {
@@ -14,16 +16,6 @@ class MRReactiveCocoaVC: MRBaseViewController {
     /// view Model
     private let viewModel = MRReactiveCocoaVM()
 
-    /// 列表 视图
-    lazy var tableview: UITableView = {
-        let view = UITableView()
-        view.tableFooterView = UIView()
-        view.delegate = self
-        view.dataSource = self.viewModel
-        view.register(MRReactiveCocoaTCell.self, forCellReuseIdentifier: "MRReactiveCocoaTCell")
-        self.view.addSubview(view)
-        return view
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,39 +28,45 @@ class MRReactiveCocoaVC: MRBaseViewController {
     }
     
     override func bindingModel() {
-        
+        self.KVO()
     }
     
     override func deploySubviews() {
-        tableview.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+        
+    }
+    
+    private func KVO(){
+        let temp = MRTempObject()
+        let test = DynamicProperty<String?>(object: temp,keyPath: "name")
+        test.producer.startWithValues { (value) in
+            print("===========value: \(value ?? "")")
         }
+        let nameProperty = DynamicProperty<String?>(object: temp, keyPath: #keyPath(MRTempObject.name))
+        nameProperty.producer.startWithValues { (name) in
+            print("===========name: \(name ?? "")")
+        }
+        temp.name = "2"
+//        let temp = MRTempObject()
+//        temp.name = "1"
+//        temp = temp
+        
+        
+        var tempObject = TempObject()
+        let property = DynamicProperty<String?>(object: tempObject, keyPath: "property")
+        property.producer.startWithValues { (value) in
+            print("===========value: \(value ?? "")")
+        }
+        
+        let property2 = DynamicProperty<String?>(object: tempObject, keyPath: #keyPath(TempObject.property))
+        property2.producer.startWithValues { (value) in
+            print("===========value: \(value ?? "")")
+        }
+        
+        tempObject.property = "3"
+        let test2 = TempObject()
+        test2.property = "4"
+        tempObject = test2
     }
     
 }
 
-// MARK: - UITableViewDelegate
-extension MRReactiveCocoaVC: UITableViewDelegate{
- 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //"KVO","Notification","delegation","block","target-action"
-        let title = self.viewModel.datas[indexPath.row]
-        switch title {
-        case "KVO":
-            let kvovc = MRRACKVOVC()
-            kvovc.title = "代替"+title
-            self.navigationController?.pushViewController(kvovc, animated: true)
-        case "Notification":
-            print(title)
-        case "delegation":
-            print(title)
-        case "block":
-            print(title)
-        case "target-action":
-            print(title)
-        default:
-            break
-        }
-    }
-    
-}
