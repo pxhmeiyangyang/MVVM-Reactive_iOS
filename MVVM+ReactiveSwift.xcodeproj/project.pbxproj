@@ -17,6 +17,7 @@
 		F12D5529227E891400F3394A /* MRReactiveCocoaTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5528227E891400F3394A /* MRReactiveCocoaTCell.swift */; };
 		F12D5530227EB28300F3394A /* MRRACKVOVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D552F227EB28300F3394A /* MRRACKVOVM.swift */; };
 		F12D5532227EB2A300F3394A /* MRRACKVOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5531227EB2A300F3394A /* MRRACKVOVC.swift */; };
+		F12D5534227EB63D00F3394A /* MRTempObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5533227EB63D00F3394A /* MRTempObject.swift */; };
 		F13C97512223CDC500FCA76B /* MRBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */; };
 		F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DAC221AABDA00020B40 /* EmailVC.swift */; };
 		F1716DB3221AB03000020B40 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DB2221AB03000020B40 /* UserService.swift */; };
@@ -81,6 +82,7 @@
 		F12D5528227E891400F3394A /* MRReactiveCocoaTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRReactiveCocoaTCell.swift; sourceTree = "<group>"; };
 		F12D552F227EB28300F3394A /* MRRACKVOVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRRACKVOVM.swift; sourceTree = "<group>"; };
 		F12D5531227EB2A300F3394A /* MRRACKVOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRRACKVOVC.swift; sourceTree = "<group>"; };
+		F12D5533227EB63D00F3394A /* MRTempObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTempObject.swift; sourceTree = "<group>"; };
 		F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRBaseViewModel.swift; sourceTree = "<group>"; };
 		F1716DAC221AABDA00020B40 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		F1716DB2221AB03000020B40 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		F12D552A227E942700F3394A /* M */ = {
 			isa = PBXGroup;
 			children = (
+				F12D5533227EB63D00F3394A /* MRTempObject.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				F17A2455221E7D0C00931A0F /* LoginExampleVC.swift in Sources */,
 				F12D551F227E7DCB00F3394A /* MRMVVMProtocol.swift in Sources */,
 				F13C97512223CDC500FCA76B /* MRBaseViewModel.swift in Sources */,
+				F12D5534227EB63D00F3394A /* MRTempObject.swift in Sources */,
 				F17A2460221E99FF00931A0F /* BookListVM.swift in Sources */,
 				F1716DB3221AB03000020B40 /* UserService.swift in Sources */,
 				F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */,

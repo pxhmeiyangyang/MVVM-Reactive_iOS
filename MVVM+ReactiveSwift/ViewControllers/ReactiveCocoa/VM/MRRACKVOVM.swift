@@ -11,6 +11,8 @@ import UIKit
 /// RAC KVO view model
 class MRRACKVOVM: MRBaseViewModel {
 
+    var temp = MRTempObject()
+    
     override func initialize() {
     
     }

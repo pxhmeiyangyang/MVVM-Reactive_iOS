@@ -56,6 +56,7 @@ extension MRReactiveCocoaVC: UITableViewDelegate{
         switch title {
         case "KVO":
             let kvovc = MRRACKVOVC()
+            kvovc.title = "代替"+title
             self.navigationController?.pushViewController(kvovc, animated: true)
         case "Notification":
             print(title)
