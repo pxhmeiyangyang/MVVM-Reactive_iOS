@@ -21,7 +21,7 @@ class MRReactiveCocoaVC: MRBaseViewController {
     //    监听事件:
     //      listenEvent
     //    代替通知:
-    //
+    //      replaceNotification
     //    监听文本框文字改变:
     //      textFieldChange
     /// 文本输入框
@@ -60,6 +60,7 @@ class MRReactiveCocoaVC: MRBaseViewController {
         self.replaceDelegate()
         self.replaceKVO()
         self.listenEvent()
+        self.replaceNotification()
         self.textFieldChange()
     }
     
@@ -124,6 +125,13 @@ class MRReactiveCocoaVC: MRBaseViewController {
     private func listenEvent(){
         button.reactive.controlEvents(UIControl.Event.touchUpInside).observeValues { (sender) in
             print("这是一个按钮点击了")
+        }
+    }
+    
+    /// 替代通知
+    private func replaceNotification(){
+        NotificationCenter.default.reactive.notifications(forName: UIApplication.didBecomeActiveNotification).observeValues { (noti: Notification) in
+            print("UIApplication.didBecomeActiveNotification")
         }
     }
     
