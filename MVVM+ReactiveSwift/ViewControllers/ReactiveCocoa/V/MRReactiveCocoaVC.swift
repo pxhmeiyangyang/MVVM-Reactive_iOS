@@ -12,14 +12,26 @@ import ReactiveCocoa
 
 /// Reactive cocoa view controller
 class MRReactiveCocoaVC: MRBaseViewController {
-
+    
+    //    ReactiveCocoa开发中常见用法。
+    //    代替代理:
+    //      reactiveCocoa
+    //    代替KVO :
+    //      replaceKVO
+    //    监听事件:
+    //
+    //    代替通知:
+    //
+    //    监听文本框文字改变:
+    
+    
     /// view Model
     private let viewModel = MRReactiveCocoaVM()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -28,14 +40,25 @@ class MRReactiveCocoaVC: MRBaseViewController {
     }
     
     override func bindingModel() {
-        self.KVO()
+        self.replaceDelegate()
+        self.replaceKVO()
     }
     
     override func deploySubviews() {
         
     }
     
-    private func KVO(){
+    /// reactiveCocoa 替换 协议
+    private func replaceDelegate(){
+        let tap = UITapGestureRecognizer.init()
+        self.view.addGestureRecognizer(tap)
+        tap.reactive.stateChanged.observeValues { (tap) in
+            print("==========点击了")
+        }
+    }
+    
+    /// reactiveCocoa 替换 key value observer
+    private func replaceKVO(){
         let temp = MRTempObject()
         let test = DynamicProperty<String?>(object: temp,keyPath: "name")
         test.producer.startWithValues { (value) in
@@ -46,9 +69,9 @@ class MRReactiveCocoaVC: MRBaseViewController {
             print("===========name: \(name ?? "")")
         }
         temp.name = "2"
-//        let temp = MRTempObject()
-//        temp.name = "1"
-//        temp = temp
+        //        let temp = MRTempObject()
+        //        temp.name = "1"
+        //        temp = temp
         
         
         var tempObject = TempObject()
