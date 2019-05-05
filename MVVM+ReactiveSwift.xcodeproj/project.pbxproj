@@ -11,6 +11,10 @@
 		601BF23B0A943C03E70BE583 /* Pods_MVVM_ReactiveSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0A43BE75AA2BF8206A2004 /* Pods_MVVM_ReactiveSwiftTests.framework */; };
 		B3FDF57FD46A5344CC1AB318 /* Pods_MVVM_ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C9B624DDB74D412076990C /* Pods_MVVM_ReactiveSwift.framework */; };
 		F12D551F227E7DCB00F3394A /* MRMVVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D551E227E7DCB00F3394A /* MRMVVMProtocol.swift */; };
+		F12D5523227E819200F3394A /* MRReactiveCocoaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5522227E819200F3394A /* MRReactiveCocoaVC.swift */; };
+		F12D5525227E81A300F3394A /* MRReactiveCocoaVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5524227E81A300F3394A /* MRReactiveCocoaVM.swift */; };
+		F12D5527227E85A300F3394A /* MRBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5526227E85A300F3394A /* MRBaseTableViewCell.swift */; };
+		F12D5529227E891400F3394A /* MRReactiveCocoaTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5528227E891400F3394A /* MRReactiveCocoaTCell.swift */; };
 		F13C97512223CDC500FCA76B /* MRBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */; };
 		F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DAC221AABDA00020B40 /* EmailVC.swift */; };
 		F1716DB3221AB03000020B40 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DB2221AB03000020B40 /* UserService.swift */; };
@@ -69,6 +73,10 @@
 		CD747EA95D7955CB65F5969C /* Pods-MVVM+ReactiveSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwift/Pods-MVVM+ReactiveSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E431C71D9C83C331E26DC66D /* Pods-MVVM+ReactiveSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+ReactiveSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM+ReactiveSwift/Pods-MVVM+ReactiveSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		F12D551E227E7DCB00F3394A /* MRMVVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRMVVMProtocol.swift; sourceTree = "<group>"; };
+		F12D5522227E819200F3394A /* MRReactiveCocoaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRReactiveCocoaVC.swift; sourceTree = "<group>"; };
+		F12D5524227E81A300F3394A /* MRReactiveCocoaVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRReactiveCocoaVM.swift; sourceTree = "<group>"; };
+		F12D5526227E85A300F3394A /* MRBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRBaseTableViewCell.swift; sourceTree = "<group>"; };
+		F12D5528227E891400F3394A /* MRReactiveCocoaTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRReactiveCocoaTCell.swift; sourceTree = "<group>"; };
 		F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRBaseViewModel.swift; sourceTree = "<group>"; };
 		F1716DAC221AABDA00020B40 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		F1716DB2221AB03000020B40 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -166,8 +174,19 @@
 				F1EC37DD22200ABE00FDE3C7 /* MRBaseViewController.swift */,
 				F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */,
 				F12D551E227E7DCB00F3394A /* MRMVVMProtocol.swift */,
+				F12D5526227E85A300F3394A /* MRBaseTableViewCell.swift */,
 			);
 			path = MVVMBase;
+			sourceTree = "<group>";
+		};
+		F12D5521227E815A00F3394A /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				F12D5522227E819200F3394A /* MRReactiveCocoaVC.swift */,
+				F12D5524227E81A300F3394A /* MRReactiveCocoaVM.swift */,
+				F12D5528227E891400F3394A /* MRReactiveCocoaTCell.swift */,
+			);
+			path = ReactiveCocoa;
 			sourceTree = "<group>";
 		};
 		F17A2453221E7CE100931A0F /* LoginExample */ = {
@@ -259,6 +278,7 @@
 		F1EC37BF221FA99900FDE3C7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F12D5521227E815A00F3394A /* ReactiveCocoa */,
 				F1EC37DA2220005400FDE3C7 /* Views */,
 				F1EC37CB221FF3E700FDE3C7 /* Login&Register */,
 				F1F999B4221BA6CC005A52F6 /* MainTabBarVC.swift */,
@@ -539,8 +559,10 @@
 			files = (
 				F1716DB5221AB04E00020B40 /* ViewModel.swift in Sources */,
 				F1EC37D7221FF9EB00FDE3C7 /* UIFont+MRExtension.swift in Sources */,
+				F12D5529227E891400F3394A /* MRReactiveCocoaTCell.swift in Sources */,
 				F1EC37D9221FFAB200FDE3C7 /* UIColor+MRExtension.swift in Sources */,
 				F1F999B1221B9EEC005A52F6 /* StdlibExtensions.swift in Sources */,
+				F12D5523227E819200F3394A /* MRReactiveCocoaVC.swift in Sources */,
 				F1F999B7221BA928005A52F6 /* LoginVC.swift in Sources */,
 				F17A245E221E99EB00931A0F /* BookListVC.swift in Sources */,
 				F1EC37DE22200ABE00FDE3C7 /* MRBaseViewController.swift in Sources */,
@@ -552,8 +574,10 @@
 				F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */,
 				F1F999C8221C0C35005A52F6 /* LoginModel.swift in Sources */,
 				F1EC37D5221FF5F400FDE3C7 /* UIButton+MRCustom.swift in Sources */,
+				F12D5525227E81A300F3394A /* MRReactiveCocoaVM.swift in Sources */,
 				F1EC37CD221FF40700FDE3C7 /* MRLoginModel.swift in Sources */,
 				F1EC37DC2220008D00FDE3C7 /* MRInputTextFiled.swift in Sources */,
+				F12D5527227E85A300F3394A /* MRBaseTableViewCell.swift in Sources */,
 				F1F999C6221C0C23005A52F6 /* LoginVM.swift in Sources */,
 				F1EC37D1221FF45400FDE3C7 /* MRLoginVC.swift in Sources */,
 				F1EC37CF221FF41E00FDE3C7 /* MRLoginVM.swift in Sources */,

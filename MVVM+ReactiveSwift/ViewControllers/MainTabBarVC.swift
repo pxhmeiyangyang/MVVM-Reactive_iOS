@@ -39,17 +39,17 @@ class MainTabBarVC: UITabBarController {
         emailVC.tabBarItem.image = UIImage.init(named: "首页iconaudition1")?.withRenderingMode(.alwaysOriginal)
         emailVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconaudition2")?.withRenderingMode(.alwaysOriginal)
         
-        let loginVC = MRLoginVC()
-        loginVC.title = "登录页面"
-        loginVC.tabBarItem.image = UIImage.init(named: "首页iconchat2")?.withRenderingMode(.alwaysOriginal)
-        loginVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconchat3")?.withRenderingMode(.alwaysOriginal)
+        let reactiveCocoaVC = MRReactiveCocoaVC()
+        reactiveCocoaVC.tabBarItem.title = "ReactiveCocoa"
+        reactiveCocoaVC.tabBarItem.image = UIImage.init(named: "首页iconchat2")?.withRenderingMode(.alwaysOriginal)
+        reactiveCocoaVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconchat3")?.withRenderingMode(.alwaysOriginal)
         
         let loginExampleVC = LoginExampleVC()
         loginExampleVC.title = "登录2页面"
         loginExampleVC.tabBarItem.image = UIImage.init(named: "首页iconchat2")?.withRenderingMode(.alwaysOriginal)
         loginExampleVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconchat3")?.withRenderingMode(.alwaysOriginal)
         
-        self.viewControllers = [bookListVC,loginVC,loginExampleVC,emailVC]
+        self.viewControllers = [bookListVC,reactiveCocoaVC,loginExampleVC,emailVC]
         self.selectedIndex = 0
     }
     
