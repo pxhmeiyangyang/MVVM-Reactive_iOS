@@ -51,7 +51,11 @@ class MRLoginVC: MRBaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func layoutUI() {
+    override func initialize() {
+        
+    }
+    
+    override func deploySubviews() {
         loginBtn.snp.makeConstraints { (make) in
             make.left.equalTo(35)
             make.right.equalTo(-35)
@@ -76,7 +80,7 @@ class MRLoginVC: MRBaseViewController {
         }
     }
     
-    override func bindModels() {
+    override func bindingModel() {
         BindingTarget(object: viewModel.loginModel, keyPath: #keyPath(MRLoginModel.username)) <~ userNameTF.inputTextField.reactive.continuousTextValues
         
         BindingTarget(object: viewModel.loginModel, keyPath: #keyPath(MRLoginModel.password)) <~ passwordTF.inputTextField.reactive.continuousTextValues
@@ -103,5 +107,4 @@ class MRLoginVC: MRBaseViewController {
             })
         }
     }
-    
 }

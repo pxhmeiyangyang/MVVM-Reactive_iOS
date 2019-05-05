@@ -26,7 +26,16 @@ class MRLoginVM: MRBaseViewModel {
         super.init()
     }
     
-    override func initialBind() {
+    
+    override func initialize() {
+        
+    }
+    
+    override func deploySubviews() {
+        
+    }
+    
+    override func bindingModel() {
         let usernameProperty = DynamicProperty<String?>.init(object: loginModel, keyPath: #keyPath(MRLoginModel.username))
         let passwordProperty = DynamicProperty<String?>.init(object: loginModel, keyPath: #keyPath(MRLoginModel.password))
         loginEnableProducer = SignalProducer.combineLatest(usernameProperty, passwordProperty).map({ (username,password) -> Bool in
@@ -38,6 +47,5 @@ class MRLoginVM: MRBaseViewModel {
                 observe.sendCompleted()
             })
         })
-    }
-    
+    }    
 }

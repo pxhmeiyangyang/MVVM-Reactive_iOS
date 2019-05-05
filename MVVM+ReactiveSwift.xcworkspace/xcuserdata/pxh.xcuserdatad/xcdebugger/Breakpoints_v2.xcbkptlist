@@ -74,7 +74,7 @@
                   moduleName = "MVVM+ReactiveSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pxh/Documents/iOS/MVVM-Reactive_iOS/MVVM+ReactiveSwift/ViewControllers/Login/LoginVM.swift"
-                  timestampString = "578307151.29011"
+                  timestampString = "578715803.33814"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
@@ -89,7 +89,7 @@
                   moduleName = "MVVM+ReactiveSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pxh/Documents/iOS/MVVM-Reactive_iOS/MVVM+ReactiveSwift/ViewControllers/Login/LoginVM.swift"
-                  timestampString = "578307151.293362"
+                  timestampString = "578715803.34155"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -113,20 +113,6 @@
             endingLineNumber = "45"
             landmarkName = "initialBind()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MVVM+ReactiveSwift/ViewControllers/Login&amp;Register/MRLoginVM.swift"
-            timestampString = "578307151.263033"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
