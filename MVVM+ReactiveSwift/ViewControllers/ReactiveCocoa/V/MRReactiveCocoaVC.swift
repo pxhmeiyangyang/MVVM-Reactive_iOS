@@ -24,6 +24,23 @@ class MRReactiveCocoaVC: MRBaseViewController {
     //
     //    监听文本框文字改变:
     
+    /// 文本输入框
+    lazy var textField: UITextField = {
+        let view = UITextField()
+        self.view.addSubview(view)
+        view.backgroundColor = UIColor.gray
+        return view
+    }()
+    
+    /// 按钮
+    lazy var button: UIButton = {
+        let view = UIButton(type: UIButton.ButtonType.custom)
+        self.view.addSubview(view)
+        view.setTitle("这是一个按钮", for: UIControl.State.normal)
+        view.backgroundColor = UIColor.gray
+        return view
+    }()
+    
     
     /// view Model
     private let viewModel = MRReactiveCocoaVM()
@@ -45,7 +62,18 @@ class MRReactiveCocoaVC: MRBaseViewController {
     }
     
     override func deploySubviews() {
+        textField.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(100)
+            make.width.equalTo(100)
+        }
         
+        button.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(150)
+            make.width.equalTo(100)
+            make.height.equalTo(44)
+        }
     }
     
     /// reactiveCocoa 替换 协议
