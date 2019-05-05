@@ -51,7 +51,23 @@ class MRReactiveCocoaVC: MRBaseViewController {
 extension MRReactiveCocoaVC: UITableViewDelegate{
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        //"KVO","Notification","delegation","block","target-action"
+        let title = self.viewModel.datas[indexPath.row]
+        switch title {
+        case "KVO":
+            let kvovc = MRRACKVOVC()
+            self.navigationController?.pushViewController(kvovc, animated: true)
+        case "Notification":
+            print(title)
+        case "delegation":
+            print(title)
+        case "block":
+            print(title)
+        case "target-action":
+            print(title)
+        default:
+            break
+        }
     }
     
 }

@@ -39,7 +39,7 @@ class MainTabBarVC: UITabBarController {
         emailVC.tabBarItem.image = UIImage.init(named: "首页iconaudition1")?.withRenderingMode(.alwaysOriginal)
         emailVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconaudition2")?.withRenderingMode(.alwaysOriginal)
         
-        let reactiveCocoaVC = MRReactiveCocoaVC()
+        let reactiveCocoaVC = UINavigationController.init(rootViewController: MRReactiveCocoaVC())
         reactiveCocoaVC.tabBarItem.title = "ReactiveCocoa"
         reactiveCocoaVC.tabBarItem.image = UIImage.init(named: "首页iconchat2")?.withRenderingMode(.alwaysOriginal)
         reactiveCocoaVC.tabBarItem.selectedImage = UIImage.init(named: "首页iconchat3")?.withRenderingMode(.alwaysOriginal)
