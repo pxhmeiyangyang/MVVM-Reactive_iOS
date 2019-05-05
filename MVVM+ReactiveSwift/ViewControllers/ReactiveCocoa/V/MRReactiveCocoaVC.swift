@@ -19,11 +19,11 @@ class MRReactiveCocoaVC: MRBaseViewController {
     //    代替KVO :
     //      replaceKVO
     //    监听事件:
-    //
+    //      listenEvent
     //    代替通知:
     //
     //    监听文本框文字改变:
-    
+    //      textFieldChange
     /// 文本输入框
     lazy var textField: UITextField = {
         let view = UITextField()
@@ -59,6 +59,8 @@ class MRReactiveCocoaVC: MRBaseViewController {
     override func bindingModel() {
         self.replaceDelegate()
         self.replaceKVO()
+        self.listenEvent()
+        self.textFieldChange()
     }
     
     override func deploySubviews() {
@@ -71,8 +73,6 @@ class MRReactiveCocoaVC: MRBaseViewController {
         button.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.top.equalTo(150)
-            make.width.equalTo(100)
-            make.height.equalTo(44)
         }
     }
     
@@ -80,8 +80,9 @@ class MRReactiveCocoaVC: MRBaseViewController {
     private func replaceDelegate(){
         let tap = UITapGestureRecognizer.init()
         self.view.addGestureRecognizer(tap)
-        tap.reactive.stateChanged.observeValues { (tap) in
-            print("==========点击了")
+        tap.reactive.stateChanged.observeValues {[weak self] (tap) in
+            print("==========页面被点击了")
+            self?.view.endEditing(true)
         }
     }
     
@@ -117,6 +118,20 @@ class MRReactiveCocoaVC: MRBaseViewController {
         let test2 = TempObject()
         test2.property = "4"
         tempObject = test2
+    }
+    
+    /// 监听事件
+    private func listenEvent(){
+        button.reactive.controlEvents(UIControl.Event.touchUpInside).observeValues { (sender) in
+            print("这是一个按钮点击了")
+        }
+    }
+    
+    /// 监听textField 内容变化
+    private func textFieldChange(){
+        textField.reactive.continuousTextValues.observeValues { (content) in
+            print(content)
+        }
     }
     
 }
