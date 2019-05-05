@@ -101,6 +101,7 @@ class MRLoginVC: MRBaseViewController {
                 case .success(_):
                     print("登录成功")
                     self?.dismiss(animated: true, completion: nil)
+                    UserDefaults.standard.set(true, forKey: "isLogin")
                 case .failure(_):
                     print("登录失败")
                 }

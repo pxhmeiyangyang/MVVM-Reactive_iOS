@@ -12,8 +12,12 @@ import UIKit
 class MainTabBarVC: UITabBarController {
     
     /// 是否登录
-    var isLogin: Bool = false
-    
+    var _isLogin: Bool = false
+    var isLogin: Bool{
+        get{
+            return UserDefaults.standard.bool(forKey: "isLogin")
+        }
+    }
     /// 单例对象
     static let sharedInstance = MainTabBarVC()
     
