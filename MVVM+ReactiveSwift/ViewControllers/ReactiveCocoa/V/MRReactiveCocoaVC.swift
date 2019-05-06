@@ -119,6 +119,19 @@ class MRReactiveCocoaVC: MRBaseViewController {
         let test2 = TempObject()
         test2.property = "4"
         tempObject = test2
+        
+        var user = MRUser()
+        let userNameProerpty = DynamicProperty<String?>(object: user, keyPath: #keyPath(MRUser.userName))
+        userNameProerpty.producer.startWithValues { (value) in
+            print("User's name is \(value ?? "")")
+        }
+        userNameProerpty.signal.observeValues { (value) in
+            print("User's name is \(value ?? "")")
+        }
+        
+        user.userName = "5"
+        guard let tempUser = MRUser.deserialize(from: ["userName":"6"]) else { return }
+        user = tempUser
     }
     
     /// 监听事件
