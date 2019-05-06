@@ -16,7 +16,6 @@
 		F12D5527227E85A300F3394A /* MRBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5526227E85A300F3394A /* MRBaseTableViewCell.swift */; };
 		F12D5534227EB63D00F3394A /* MRTempObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D5533227EB63D00F3394A /* MRTempObject.swift */; };
 		F1348B39227FD42A0053279B /* MRUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1348B38227FD42A0053279B /* MRUser.swift */; };
-		F1348B3B2280322F0053279B /* DictModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1348B3A2280322F0053279B /* DictModelManager.swift */; };
 		F13C97512223CDC500FCA76B /* MRBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */; };
 		F1716DAD221AABDA00020B40 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DAC221AABDA00020B40 /* EmailVC.swift */; };
 		F1716DB3221AB03000020B40 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1716DB2221AB03000020B40 /* UserService.swift */; };
@@ -80,7 +79,6 @@
 		F12D5526227E85A300F3394A /* MRBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRBaseTableViewCell.swift; sourceTree = "<group>"; };
 		F12D5533227EB63D00F3394A /* MRTempObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTempObject.swift; sourceTree = "<group>"; };
 		F1348B38227FD42A0053279B /* MRUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRUser.swift; sourceTree = "<group>"; };
-		F1348B3A2280322F0053279B /* DictModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictModelManager.swift; sourceTree = "<group>"; };
 		F13C97502223CDC500FCA76B /* MRBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRBaseViewModel.swift; sourceTree = "<group>"; };
 		F1716DAC221AABDA00020B40 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		F1716DB2221AB03000020B40 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -300,7 +298,6 @@
 				F1B28A142216C714009EA3F9 /* OCDefine.h */,
 				F1B28A152216C714009EA3F9 /* OCDefine.m */,
 				F1F999B0221B9EEC005A52F6 /* StdlibExtensions.swift */,
-				F1348B3A2280322F0053279B /* DictModelManager.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -588,7 +585,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1716DB5221AB04E00020B40 /* ViewModel.swift in Sources */,
-				F1348B3B2280322F0053279B /* DictModelManager.swift in Sources */,
 				F1EC37D7221FF9EB00FDE3C7 /* UIFont+MRExtension.swift in Sources */,
 				F1EC37D9221FFAB200FDE3C7 /* UIColor+MRExtension.swift in Sources */,
 				F1F999B1221B9EEC005A52F6 /* StdlibExtensions.swift in Sources */,
